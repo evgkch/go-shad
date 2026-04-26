@@ -25,5 +25,5 @@ sudo apt install redis-server
 Комментарии по запуску бд в docker смотрите в задаче [dao](../dao/).
 
 ```
-(cd shopfront && docker compose up -d --wait && env REDIS="localhost:6379" go test -v ./... -count=1 || true && docker compose down)
+(cd shopfront && docker compose up -d --wait && env REDIS="127.0.0.1:6379" go test -v ./... -count=1 || true && docker compose down)
 ```
